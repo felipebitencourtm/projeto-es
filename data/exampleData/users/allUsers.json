@@ -1,0 +1,12 @@
+{
+  "users": {
+    "id0": {
+      "admin": false
+      "username": "felipe123",
+      "passwordHash": "algumahashaleatoria",
+      "birthdate": "10/10/2010",
+      "registrationDate": "12/12/2026",
+      ""
+    }
+  }
+}
