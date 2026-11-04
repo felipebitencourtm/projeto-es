@@ -1,0 +1,264 @@
+{
+  "idiomas": {
+    "lang_en": {
+      "languageId": "lang_en",
+      "name": "Inglês",
+      "unidades": [
+        {
+          "number": 1,
+          "title": "Fundamentos",
+          "licoes": [
+            {
+              "lessonId": "les_en_1_1",
+              "number": 1,
+              "exercicios": [
+                {
+                  "type": "ExercicioTraducao",
+                  "exerciseId": "ex_trad_01",
+                  "exerciseTitle": "Tradução Direta",
+                  "frontText": "The book is on the table",
+                  "position": 1,
+                  "correctTexts": [
+                    "O livro está sobre a mesa",
+                    "O livro tá na mesa",
+                    "O livro esta na mesa"
+                  ]
+                },
+                {
+                  "type": "ExercicioAlternativas",
+                  "exerciseId": "ex_alt_01",
+                  "exerciseTitle": "Múltipla Escolha",
+                  "frontText": "Como se diz 'Maçã'?",
+                  "position": 2,
+                  "alternativas": [
+                    {
+                      "id": "alt_0",
+                      "text": "Banana",
+                      "correct": false
+                    },
+                    {
+                      "id": "alt_1",
+                      "text": "Apple",
+                      "correct": true
+                    },
+                    {
+                      "id": "alt_2",
+                      "text": "Grape",
+                      "correct": false
+                    },
+                    {
+                      "id": "alt_3",
+                      "text": "Orange",
+                      "correct": false
+                    }
+                  ]
+                },
+                {
+                  "type": "ExercicioCombinar",
+                  "exerciseId": "ex_comb_01",
+                  "exerciseTitle": "Encontre os pares",
+                  "frontText": "Combine as palavras em inglês com suas traduções.",
+                  "position": 3,
+                  "pares": [
+                    {
+                      "pairId": "par_1",
+                      "positionFirst": 1,
+                      "positionSecond": 5,
+                      "first": {
+                        "id": "alt_c1_en",
+                        "text": "Dog"
+                      },
+                      "second": {
+                        "id": "alt_c1_pt",
+                        "text": "Cachorro"
+                      }
+                    },
+                    {
+                      "pairId": "par_2",
+                      "positionFirst": 2,
+                      "positionSecond": 6,
+                      "first": {
+                        "id": "alt_c2_en",
+                        "text": "Cat"
+                      },
+                      "second": {
+                        "id": "alt_c2_pt",
+                        "text": "Gato"
+                      }
+                    },
+                    {
+                      "pairId": "par_3",
+                      "positionFirst": 3,
+                      "positionSecond": 7,
+                      "first": {
+                        "id": "alt_c3_en",
+                        "text": "Bird"
+                      },
+                      "second": {
+                        "id": "alt_c3_pt",
+                        "text": "Pássaro"
+                      }
+                    },
+                    {
+                      "pairId": "par_4",
+                      "positionFirst": 4,
+                      "positionSecond": 8,
+                      "first": {
+                        "id": "alt_c4_en",
+                        "text": "Fish"
+                      },
+                      "second": {
+                        "id": "alt_c4_pt",
+                        "text": "Peixe"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "ExercicioGramatica",
+                  "exerciseId": "ex_gram_01",
+                  "exerciseTitle": "Verbo To Be",
+                  "frontText": "Leia a explicação sobre o verbo To Be.",
+                  "position": 4,
+                  "pontosGramaticais": [
+                    {
+                      "point": "Uso do 'Is'",
+                      "description": "Utilizado para a terceira pessoa do singular (he, she, it)."
+                    }
+                  ]
+                },
+                {
+                  "type": "ExercicioAlternativas",
+                  "exerciseId": "rev_alt_01",
+                  "exerciseTitle": "Revisão: Pronomes",
+                  "frontText": "Qual é o pronome para 'Ele'?",
+                  "position": 5,
+                  "reviewId": "rev_001",
+                  "alternativas": [
+                    {
+                      "id": "alt_0",
+                      "text": "He",
+                      "correct": true
+                    },
+                    {
+                      "id": "alt_1",
+                      "text": "She",
+                      "correct": false
+                    },
+                    {
+                      "id": "alt_2",
+                      "text": "They",
+                      "correct": false
+                    },
+                    {
+                      "id": "alt_3",
+                      "text": "Them",
+                      "correct": false
+                    }
+                  ]
+                },
+                {
+                  "type": "ExercicioTraducao",
+                  "exerciseId": "rev_voc_01",
+                  "exerciseTitle": "Flashcard: Água",
+                  "frontText": "Water",
+                  "position": 6,
+                  "reviewId": "rev_002",
+                  "correctTexts": [
+                    "Água"
+                  ]
+                }
+              ]
+            },
+            {
+              "lessonId": "les_8d1809",
+              "number": 2,
+              "title": "Lição 2",
+              "exercicios": [
+                {
+                  "type": "ExercicioTraducao",
+                  "exerciseId": "ex_81dae6",
+                  "exerciseTitle": "Novo Exercício",
+                  "frontText": "The yellow bird",
+                  "position": 1,
+                  "correctTexts": [
+                    "O pássaro amarelo"
+                  ]
+                },
+                {
+                  "type": "ExercicioTraducao",
+                  "exerciseId": "ex_cc9caf",
+                  "exerciseTitle": "Novo Exercício",
+                  "frontText": "The blue bird",
+                  "position": 2,
+                  "correctTexts": [
+                    "O pássaro azul"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "lang_055cb7b6": {
+      "languageId": "lang_055cb7b6",
+      "name": "Japonês",
+      "unidades": [
+        {
+          "number": 1,
+          "title": "Unidade teste",
+          "licoes": [
+            {
+              "lessonId": "les_a7dd78",
+              "number": 1,
+              "title": "Lição 1",
+              "exercicios": [
+                {
+                  "type": "RevisaoVocabulario",
+                  "exerciseId": "ex_a488e8",
+                  "exerciseTitle": "Flashcard 1",
+                  "frontText": "水",
+                  "position": 1,
+                  "backText": "Água"
+                },
+                {
+                  "type": "RevisaoVocabulario",
+                  "exerciseId": "ex_c6e91b",
+                  "exerciseTitle": "Flashcard 2",
+                  "frontText": "土",
+                  "position": 2,
+                  "backText": "Terra"
+                },
+                {
+                  "type": "RevisaoVocabulario",
+                  "exerciseId": "ex_961618",
+                  "exerciseTitle": "Flashcard 3",
+                  "frontText": "火",
+                  "position": 3,
+                  "backText": "Fogo"
+                },
+                {
+                  "type": "RevisaoVocabulario",
+                  "exerciseId": "ex_5affaf",
+                  "exerciseTitle": "Flashcard 4",
+                  "frontText": "風",
+                  "position": 4,
+                  "backText": "Vento"
+                },
+                {
+                  "type": "RevisaoVocabulario",
+                  "exerciseId": "ex_56576f",
+                  "exerciseTitle": "Flashcard 5",
+                  "frontText": "世界",
+                  "position": 5,
+                  "backText": "Mundo"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "alunos": {
+    "ef79a156-bec1-43b1-af14-9900ee508c76": {
+      "userId": "ef79a156-bec1-43b1-af14-9900ee508c76",
+      "email": "caio@caio.caio",
+      "username": "caio",
+      "passwordHash": "942594980dbebf87ff8a04f14a13b66debc899c0e04296cfeec93802649582a3",
+      "birthdate": "1000-10-10",
+      "registrationDate": "2026-10-22",
+      "streak": 2,
+      "longestStreak": 2,
+      "lastActivityDate": "2026-10-23",
+      "friends": [
+        "977936a2-79d8-49de-b451-a313b2a142eb"
+      ],
+      "pedidosDeAmizade": [
+        {
+          "senderId": "977936a2-79d8-49de-b451-a313b2a142eb",
+          "dateSent": "2026-10-22",
+          "status": "ACEITO"
+        }
+      ],
+      "amizadesDetalhes": {
+        "977936a2-79d8-49de-b451-a313b2a142eb": {
+          "dateEstablished": "2026-10-22",
+          "friendStreakStart": "2026-10-22",
+          "friendStreak": 0
+        }
+      }
+    },
+    "977936a2-79d8-49de-b451-a313b2a142eb": {
+      "userId": "977936a2-79d8-49de-b451-a313b2a142eb",
+      "email": "felipe@felipe.felipe",
+      "username": "felipe",
+      "passwordHash": "2bd2d3a31934d76198acc030caca4c31965474fe5fa48f35fef79d0fd74ee1b2",
+      "birthdate": "2000-10-10",
+      "registrationDate": "2026-10-22",
+      "streak": 1,
+      "longestStreak": 2,
+      "lastActivityDate": "2026-11-03",
+      "friends": [
+        "ef79a156-bec1-43b1-af14-9900ee508c76"
+      ],
+      "pedidosDeAmizade": [],
+      "amizadesDetalhes": {
+        "ef79a156-bec1-43b1-af14-9900ee508c76": {
+          "dateEstablished": "2026-10-22",
+          "friendStreakStart": "2026-10-22",
+          "friendStreak": 0
+        }
+      },
+      "progress": {
+        "lang_en": {
+          "languageId": "lang_en",
+          "lastCompletedLessonId": "les_en_1_1",
+          "licoes": {
+            "les_en_1_1": {
+              "lessonId": "les_en_1_1",
+              "complete": true,
+              "completionDate": "2026-11-03"
+            },
+            "les_8d1809": {
+              "lessonId": "les_8d1809",
+              "complete": true,
+              "completionDate": "2026-10-23"
+            }
+          },
+          "sessaoSrs": {
+            "sessionDate": "2026-10-23",
+            "cards": {
+              "alt_ex_alt_01": {
+                "reviewId": "alt_ex_alt_01",
+                "lastRecalledDate": "2026-10-24",
+                "easeFactor": 2.5,
+                "repetitions": 2,
+                "interval": 6
+              },
+              "alt_rev_alt_01": {
+                "reviewId": "alt_rev_alt_01",
+                "lastRecalledDate": "2026-10-24",
+                "easeFactor": 2.5,
+                "repetitions": 1,
+                "interval": 1
+              }
+            }
+          }
+        },
+        "lang_055cb7b6": {
+          "languageId": "lang_055cb7b6",
+          "lastCompletedLessonId": "les_a7dd78",
+          "licoes": {
+            "les_a7dd78": {
+              "lessonId": "les_a7dd78",
+              "complete": true,
+              "completionDate": "2026-10-24"
+            }
+          },
+          "sessaoSrs": {
+            "sessionDate": "2026-10-24",
+            "cards": {
+              "ex_a488e8": {
+                "reviewId": "ex_a488e8",
+                "lastRecalledDate": "2026-10-24",
+                "easeFactor": 2.5,
+                "repetitions": 1,
+                "interval": 1
+              },
+              "ex_c6e91b": {
+                "reviewId": "ex_c6e91b",
+                "lastRecalledDate": "2026-10-24",
+                "easeFactor": 2.6,
+                "repetitions": 1,
+                "interval": 1
+              },
+              "ex_961618": {
+                "reviewId": "ex_961618",
+                "lastRecalledDate": "2026-10-24",
+                "easeFactor": 2.3,
+                "repetitions": 1,
+                "interval": 1
+              },
+              "ex_5affaf": {
+                "reviewId": "ex_5affaf",
+                "lastRecalledDate": "2026-10-24",
+                "easeFactor": 2.3,
+                "repetitions": 1,
+                "interval": 1
+              },
+              "ex_56576f": {
+                "reviewId": "ex_56576f",
+                "lastRecalledDate": "2026-10-24",
+                "easeFactor": 2.3,
+                "repetitions": 1,
+                "interval": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "e52d4b08-a093-4111-89d3-dcef16c4e859": {
+      "userId": "e52d4b08-a093-4111-89d3-dcef16c4e859",
+      "email": "belly@belly.belly",
+      "username": "belly",
+      "passwordHash": "c396f983099edc04758642ad2dafcc9fc8f443a7ec86f91fc7b3c992c1df0e17",
+      "birthdate": "2000-10-10",
+      "registrationDate": "2026-11-03",
+      "streak": 0,
+      "longestStreak": 0,
+      "lastActivityDate": null,
+      "friends": [],
+      "pedidosDeAmizade": [],
+      "amizadesDetalhes": {},
+      "progress": {}
+    }
+  },
+  "admins": {
+    "admin_01": {
+      "userId": "admin_01",
+      "email": "admin@koilingo.com",
+      "username": "admin_mestre",
+      "passwordHash": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9",
+      "birthdate": "1990-01-01",
+      "registrationDate": "2025-12-01"
+    }
+  }
+}
