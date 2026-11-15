@@ -152,6 +152,21 @@
       "pedidosDeAmizade": [],
       "amizadesDetalhes": {},
       "progress": {}
+    },
+    "11124e6c-4753-4184-8276-eafb7df68352": {
+      "userId": "11124e6c-4753-4184-8276-eafb7df68352",
+      "email": "felipeb@gmail.com",
+      "username": "felipeb",
+      "passwordHash": "10783303a721a2c222f07b0b99228de6a14aa5d7b59f4357e002c39d58b92a96",
+      "birthdate": "2010-10-10",
+      "registrationDate": "2026-11-15",
+      "streak": 0,
+      "longestStreak": 0,
+      "lastActivityDate": null,
+      "friends": [],
+      "pedidosDeAmizade": [],
+      "amizadesDetalhes": {},
+      "progress": {}
     }
   },
   "admins": {

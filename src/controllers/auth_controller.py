@@ -4,7 +4,7 @@ import hashlib
 from datetime import date
 from typing import Optional, Union, Tuple
 from src.repositories.user_repo import UserRepository
-from src.models.profile import Aluno, Admin, Usuario, ProgressoIdioma, EstadoRevisao
+from src.models.profile import Aluno, Admin, ProgressoIdioma, EstadoRevisao, hash_password_with_salt
 
 class AuthController:
     def __init__(self, user_repo: UserRepository):
@@ -39,8 +39,20 @@ class AuthController:
             temp_username = f"{base_username[:15]}{contador}"
             contador += 1
         
-        hashed_password = hashlib.sha256(password.encode('utf-8')).hexdigest()
-        novo_aluno = Aluno(userId=new_id, email=email, username=temp_username, passwordHash=hashed_password, birthdate=birthdate, registrationDate=date.today().isoformat())
+        pw_hash, pw_salt = hash_password_with_salt(password)
+
+        novo_aluno = Aluno(
+            userId=new_id,
+            email=email,
+            username=temp_username,
+            passwordHash=pw_hash,
+            passwordSalt=pw_salt,
+            birthdate=birthdate,
+            registrationDate=date.today().isoformat()
+        )
+
+        if not novo_aluno.isMinimumAgeValid(12):
+            return False, "Você deve ter pelo menos 12 anos para se cadastrar (RN01)."
         
         if self.user_repo.save_aluno(novo_aluno):
             self.current_user = novo_aluno
@@ -58,17 +70,36 @@ class AuthController:
         return False, "Erro ao salvar."
 
     def register_study_activity(self) -> None:
-        if not self.current_user or isinstance(self.current_user, Admin): return
+        if not self.current_user or isinstance(self.current_user, Admin):
+            return
         hoje = date.today()
-        if self.current_user.lastActivityDate:
-            diferenca = (hoje - date.fromisoformat(self.current_user.lastActivityDate)).days
-            if diferenca == 1: self.current_user.incrementStreak()
-            elif diferenca > 1:
-                self.current_user.resetStreak()
+        hoje_iso = hoje.isoformat()
+
+        # Só incrementa se ainda não registrou atividade hoje
+        if self.current_user.lastActivityDate != hoje_iso:
+            if self.current_user.lastActivityDate:
+                diferenca = (hoje - date.fromisoformat(self.current_user.lastActivityDate)).days
+                if diferenca == 1:
+                    self.current_user.incrementStreak()
+                elif diferenca > 1:
+                    self.current_user.resetStreak()
+                    self.current_user.incrementStreak()
+            else:
                 self.current_user.incrementStreak()
-        else: self.current_user.incrementStreak()
-        self.current_user.lastActivityDate = hoje.isoformat()
-        self.user_repo.save_aluno(self.current_user)
+
+            self.current_user.lastActivityDate = hoje_iso
+
+            # Atualiza ofensiva compartilhada se o amigo também já estudou hoje (RN05)
+            alunos = self.user_repo.get_all_alunos()
+            for friend_id, amizade in self.current_user.amizadesDetalhes.items():
+                amigo = alunos.get(friend_id)
+                if amigo and amigo.lastActivityDate == hoje_iso:
+                    amizade.incrementFriendStreak()
+                    if self.current_user.userId in amigo.amizadesDetalhes:
+                        amigo.amizadesDetalhes[self.current_user.userId].incrementFriendStreak()
+                        self.user_repo.save_aluno(amigo)
+
+            self.user_repo.save_aluno(self.current_user)
 
     def mark_lesson_completed(self, lang_id: str, lesson_id: str) -> None:
         if not self.current_user or isinstance(self.current_user, Admin): return

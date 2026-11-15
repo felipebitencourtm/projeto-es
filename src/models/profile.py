@@ -1,8 +1,17 @@
+from abc import ABC
 import hashlib
 from datetime import date, timedelta
 from dataclasses import dataclass, field
+import os
 from typing import List, Dict, Optional
 from enum import Enum
+
+def hash_password_with_salt(password: str, salt: Optional[str] = None) -> tuple[str, str]:
+    """Gera hash PBKDF2-HMAC-SHA256 com salt aleatório (RNF06)."""
+    if not salt:
+        salt = os.urandom(16).hex()
+    dk = hashlib.pbkdf2_hmac('sha256', password.encode('utf-8'), salt.encode('utf-8'), 100_000)
+    return dk.hex(), salt
 
 class StatusPedido(Enum):
     PENDENTE = "PENDENTE"
@@ -124,13 +133,14 @@ class ProgressoIdioma:
 # ----------------------------------------------------
 
 @dataclass
-class Usuario:
+class Usuario(ABC):
     userId: str
     email: str
     username: str
     passwordHash: str
     birthdate: str
     registrationDate: str
+    passwordSalt: str = ""
 
     def changeUsername(self, newUsername: str) -> None:
         self.username = newUsername
@@ -138,9 +148,25 @@ class Usuario:
     def changeEmail(self, newEmail: str) -> None:
         self.email = newEmail
 
+    def changePassword(self, newPassword: str) -> None:
+        self.passwordHash, self.passwordSalt = hash_password_with_salt(newPassword)
+
     def authenticate(self, password: str) -> bool:
-        hashed_input = hashlib.sha256(password.encode('utf-8')).hexdigest()
-        return self.passwordHash == hashed_input
+        if self.passwordSalt:
+            hashed_input, _ = hash_password_with_salt(password, self.passwordSalt)
+            return self.passwordHash == hashed_input
+        # Fallback de compatibilidade para contas antigas sem salt
+        return self.passwordHash == hashlib.sha256(password.encode('utf-8')).hexdigest()
+
+    def isMinimumAgeValid(self, min_age: int = 12) -> bool:
+        """Valida RN01: usuário deve ter pelo menos 12 anos."""
+        try:
+            bdate = date.fromisoformat(self.birthdate)
+            today = date.today()
+            age = today.year - bdate.year - ((today.month, today.day) < (bdate.month, bdate.day))
+            return age >= min_age
+        except ValueError:
+            return False
 
 @dataclass
 class Aluno(Usuario):
