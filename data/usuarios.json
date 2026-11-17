@@ -1,33 +1,5 @@
 {
   "alunos": {
-    "ef79a156-bec1-43b1-af14-9900ee508c76": {
-      "userId": "ef79a156-bec1-43b1-af14-9900ee508c76",
-      "email": "caio@caio.caio",
-      "username": "caio",
-      "passwordHash": "942594980dbebf87ff8a04f14a13b66debc899c0e04296cfeec93802649582a3",
-      "birthdate": "1000-10-10",
-      "registrationDate": "2026-10-22",
-      "streak": 2,
-      "longestStreak": 2,
-      "lastActivityDate": "2026-10-23",
-      "friends": [
-        "977936a2-79d8-49de-b451-a313b2a142eb"
-      ],
-      "pedidosDeAmizade": [
-        {
-          "senderId": "977936a2-79d8-49de-b451-a313b2a142eb",
-          "dateSent": "2026-10-22",
-          "status": "ACEITO"
-        }
-      ],
-      "amizadesDetalhes": {
-        "977936a2-79d8-49de-b451-a313b2a142eb": {
-          "dateEstablished": "2026-10-22",
-          "friendStreakStart": "2026-10-22",
-          "friendStreak": 0
-        }
-      }
-    },
     "977936a2-79d8-49de-b451-a313b2a142eb": {
       "userId": "977936a2-79d8-49de-b451-a313b2a142eb",
       "email": "felipe@felipe.felipe",
@@ -37,18 +9,10 @@
       "registrationDate": "2026-10-22",
       "streak": 1,
       "longestStreak": 2,
-      "lastActivityDate": "2026-11-03",
-      "friends": [
-        "ef79a156-bec1-43b1-af14-9900ee508c76"
-      ],
+      "lastActivityDate": "2026-11-17",
+      "friends": [],
       "pedidosDeAmizade": [],
-      "amizadesDetalhes": {
-        "ef79a156-bec1-43b1-af14-9900ee508c76": {
-          "dateEstablished": "2026-10-22",
-          "friendStreakStart": "2026-10-22",
-          "friendStreak": 0
-        }
-      },
+      "amizadesDetalhes": {},
       "progress": {
         "lang_en": {
           "languageId": "lang_en",
@@ -135,16 +99,60 @@
               }
             }
           }
+        },
+        "lang_7bca21b3": {
+          "languageId": "lang_7bca21b3",
+          "lastCompletedLessonId": "les_05f3d5",
+          "licoes": {
+            "les_05f3d5": {
+              "lessonId": "les_05f3d5",
+              "complete": true,
+              "completionDate": "2026-11-17"
+            }
+          },
+          "sessaoSrs": {
+            "sessionDate": "2026-11-17",
+            "cards": {
+              "ex_89e326": {
+                "reviewId": "ex_89e326",
+                "lastRecalledDate": "2026-11-17",
+                "easeFactor": 2.5,
+                "repetitions": 1,
+                "interval": 1
+              },
+              "ex_c15736": {
+                "reviewId": "ex_c15736",
+                "lastRecalledDate": "2026-11-17",
+                "easeFactor": 2.5,
+                "repetitions": 1,
+                "interval": 1
+              },
+              "ex_4ec950": {
+                "reviewId": "ex_4ec950",
+                "lastRecalledDate": "2026-11-17",
+                "easeFactor": 2.5,
+                "repetitions": 1,
+                "interval": 1
+              },
+              "alt_ex_1b0099": {
+                "reviewId": "alt_ex_1b0099",
+                "lastRecalledDate": "2026-11-17",
+                "easeFactor": 2.5,
+                "repetitions": 1,
+                "interval": 1
+              }
+            }
+          }
         }
       }
     },
-    "e52d4b08-a093-4111-89d3-dcef16c4e859": {
-      "userId": "e52d4b08-a093-4111-89d3-dcef16c4e859",
-      "email": "belly@belly.belly",
-      "username": "belly",
-      "passwordHash": "c396f983099edc04758642ad2dafcc9fc8f443a7ec86f91fc7b3c992c1df0e17",
+    "9ae0f04e-f7c8-4c08-a96f-286191728463": {
+      "userId": "9ae0f04e-f7c8-4c08-a96f-286191728463",
+      "email": "victor@victor.victor",
+      "username": "victor",
+      "passwordHash": "be4a60aae6ed448f1d19ce0acd3c3990967850e8c380415fc7b4b0b8b632b63c",
       "birthdate": "2000-10-10",
-      "registrationDate": "2026-11-03",
+      "registrationDate": "2026-11-17",
       "streak": 0,
       "longestStreak": 0,
       "lastActivityDate": null,
@@ -153,13 +161,28 @@
       "amizadesDetalhes": {},
       "progress": {}
     },
-    "11124e6c-4753-4184-8276-eafb7df68352": {
-      "userId": "11124e6c-4753-4184-8276-eafb7df68352",
-      "email": "felipeb@gmail.com",
-      "username": "felipeb",
-      "passwordHash": "10783303a721a2c222f07b0b99228de6a14aa5d7b59f4357e002c39d58b92a96",
-      "birthdate": "2010-10-10",
-      "registrationDate": "2026-11-15",
+    "f0fb4c80-d0ce-4296-8e37-7f962b025f44": {
+      "userId": "f0fb4c80-d0ce-4296-8e37-7f962b025f44",
+      "email": "vinicius@vinicius.vinicius",
+      "username": "vinicius",
+      "passwordHash": "fe14aed62077acc41d7a9024cea9600af10fbf680bb9e414c56927337238a50d",
+      "birthdate": "2000-10-10",
+      "registrationDate": "2026-11-17",
+      "streak": 0,
+      "longestStreak": 0,
+      "lastActivityDate": null,
+      "friends": [],
+      "pedidosDeAmizade": [],
+      "amizadesDetalhes": {},
+      "progress": {}
+    },
+    "c57b3a07-8818-41c2-8191-1b1ce643ce4b": {
+      "userId": "c57b3a07-8818-41c2-8191-1b1ce643ce4b",
+      "email": "aldorocha@aldorocha.aldorocha",
+      "username": "aldorocha",
+      "passwordHash": "1a83d1fed2147548e76d2c68662cc542261b88a35bd4347747d601c332821f5d",
+      "birthdate": "1900-10-10",
+      "registrationDate": "2026-11-17",
       "streak": 0,
       "longestStreak": 0,
       "lastActivityDate": null,

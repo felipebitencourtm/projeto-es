@@ -1,260 +1,234 @@
 {
   "idiomas": {
-    "lang_en": {
-      "languageId": "lang_en",
+    "lang_7bca21b3": {
+      "languageId": "lang_7bca21b3",
       "name": "Inglês",
       "unidades": [
         {
           "number": 1,
-          "title": "Fundamentos",
+          "title": "Unidade 0",
           "licoes": [
             {
-              "lessonId": "les_en_1_1",
+              "lessonId": "les_05f3d5",
               "number": 1,
+              "title": "Meu nome é",
               "exercicios": [
                 {
-                  "type": "ExercicioTraducao",
-                  "exerciseId": "ex_trad_01",
-                  "exerciseTitle": "Tradução Direta",
-                  "frontText": "The book is on the table",
+                  "type": "ExercicioGramatica",
+                  "exerciseId": "ex_aa3a6f",
+                  "exerciseTitle": "Como dizer?",
+                  "frontText": "Como dizer \"Meu nome é ...\"",
                   "position": 1,
-                  "correctTexts": [
-                    "O livro está sobre a mesa",
-                    "O livro tá na mesa",
-                    "O livro esta na mesa"
+                  "pontosGramaticais": [
+                    {
+                      "point": "Existem muitas formas de dizer o seu nome em inglês, a mais comum delas é",
+                      "description": "My name is ..."
+                    }
                   ]
                 },
                 {
                   "type": "ExercicioAlternativas",
-                  "exerciseId": "ex_alt_01",
-                  "exerciseTitle": "Múltipla Escolha",
-                  "frontText": "Como se diz 'Maçã'?",
+                  "exerciseId": "ex_1b0099",
+                  "exerciseTitle": "Selecione a alternativa correta",
+                  "frontText": "Como dizer \"Meu nome é Aldo\"",
                   "position": 2,
                   "alternativas": [
                     {
                       "id": "alt_0",
-                      "text": "Banana",
+                      "text": "My nickname is Aldo",
                       "correct": false
                     },
                     {
                       "id": "alt_1",
-                      "text": "Apple",
-                      "correct": true
-                    },
-                    {
-                      "id": "alt_2",
-                      "text": "Grape",
-                      "correct": false
-                    },
-                    {
-                      "id": "alt_3",
-                      "text": "Orange",
-                      "correct": false
-                    }
-                  ]
-                },
-                {
-                  "type": "ExercicioCombinar",
-                  "exerciseId": "ex_comb_01",
-                  "exerciseTitle": "Encontre os pares",
-                  "frontText": "Combine as palavras em inglês com suas traduções.",
-                  "position": 3,
-                  "pares": [
-                    {
-                      "pairId": "par_1",
-                      "positionFirst": 1,
-                      "positionSecond": 5,
-                      "first": {
-                        "id": "alt_c1_en",
-                        "text": "Dog"
-                      },
-                      "second": {
-                        "id": "alt_c1_pt",
-                        "text": "Cachorro"
-                      }
-                    },
-                    {
-                      "pairId": "par_2",
-                      "positionFirst": 2,
-                      "positionSecond": 6,
-                      "first": {
-                        "id": "alt_c2_en",
-                        "text": "Cat"
-                      },
-                      "second": {
-                        "id": "alt_c2_pt",
-                        "text": "Gato"
-                      }
-                    },
-                    {
-                      "pairId": "par_3",
-                      "positionFirst": 3,
-                      "positionSecond": 7,
-                      "first": {
-                        "id": "alt_c3_en",
-                        "text": "Bird"
-                      },
-                      "second": {
-                        "id": "alt_c3_pt",
-                        "text": "Pássaro"
-                      }
-                    },
-                    {
-                      "pairId": "par_4",
-                      "positionFirst": 4,
-                      "positionSecond": 8,
-                      "first": {
-                        "id": "alt_c4_en",
-                        "text": "Fish"
-                      },
-                      "second": {
-                        "id": "alt_c4_pt",
-                        "text": "Peixe"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "type": "ExercicioGramatica",
-                  "exerciseId": "ex_gram_01",
-                  "exerciseTitle": "Verbo To Be",
-                  "frontText": "Leia a explicação sobre o verbo To Be.",
-                  "position": 4,
-                  "pontosGramaticais": [
-                    {
-                      "point": "Uso do 'Is'",
-                      "description": "Utilizado para a terceira pessoa do singular (he, she, it)."
-                    }
-                  ]
-                },
-                {
-                  "type": "ExercicioAlternativas",
-                  "exerciseId": "rev_alt_01",
-                  "exerciseTitle": "Revisão: Pronomes",
-                  "frontText": "Qual é o pronome para 'Ele'?",
-                  "position": 5,
-                  "reviewId": "rev_001",
-                  "alternativas": [
-                    {
-                      "id": "alt_0",
-                      "text": "He",
-                      "correct": true
-                    },
-                    {
-                      "id": "alt_1",
-                      "text": "She",
+                      "text": "My surname is Aldo",
                       "correct": false
                     },
                     {
                       "id": "alt_2",
-                      "text": "They",
-                      "correct": false
+                      "text": "My name is Aldo",
+                      "correct": true
                     },
                     {
                       "id": "alt_3",
-                      "text": "Them",
+                      "text": "My alias is Aldo",
                       "correct": false
                     }
                   ]
                 },
                 {
                   "type": "ExercicioTraducao",
-                  "exerciseId": "rev_voc_01",
-                  "exerciseTitle": "Flashcard: Água",
-                  "frontText": "Water",
-                  "position": 6,
-                  "reviewId": "rev_002",
+                  "exerciseId": "ex_062819",
+                  "exerciseTitle": "Traduza a frase",
+                  "frontText": "My name is Victor",
+                  "position": 3,
                   "correctTexts": [
-                    "Água"
+                    "Meu nome é Victor"
+                  ]
+                },
+                {
+                  "type": "RevisaoVocabulario",
+                  "exerciseId": "ex_89e326",
+                  "exerciseTitle": "Você sabe o que significa?",
+                  "frontText": "My",
+                  "position": 4,
+                  "backText": "Meu / Minha"
+                },
+                {
+                  "type": "RevisaoVocabulario",
+                  "exerciseId": "ex_c15736",
+                  "exerciseTitle": "Você sabe o que significa?",
+                  "frontText": "Name",
+                  "position": 5,
+                  "backText": "Nome"
+                },
+                {
+                  "type": "RevisaoVocabulario",
+                  "exerciseId": "ex_4ec950",
+                  "exerciseTitle": "Você sabe o que significa?",
+                  "frontText": "To be (is, am, are)",
+                  "position": 6,
+                  "backText": "Ser / Estar"
+                },
+                {
+                  "type": "ExercicioCombinar",
+                  "exerciseId": "ex_913d8b",
+                  "exerciseTitle": "Selecione as combinações corretas",
+                  "frontText": "Selecione uma alternativa à esquerda para cada alternativa à direita",
+                  "position": 7,
+                  "pares": [
+                    {
+                      "pairId": "par_0",
+                      "positionFirst": 1,
+                      "positionSecond": 5,
+                      "first": {
+                        "id": "c_0_1",
+                        "text": "My"
+                      },
+                      "second": {
+                        "id": "c_0_2",
+                        "text": "Meu"
+                      }
+                    },
+                    {
+                      "pairId": "par_1",
+                      "positionFirst": 2,
+                      "positionSecond": 6,
+                      "first": {
+                        "id": "c_1_1",
+                        "text": "Name"
+                      },
+                      "second": {
+                        "id": "c_1_2",
+                        "text": "Nome"
+                      }
+                    },
+                    {
+                      "pairId": "par_2",
+                      "positionFirst": 3,
+                      "positionSecond": 7,
+                      "first": {
+                        "id": "c_2_1",
+                        "text": "Is"
+                      },
+                      "second": {
+                        "id": "c_2_2",
+                        "text": "É"
+                      }
+                    },
+                    {
+                      "pairId": "par_3",
+                      "positionFirst": 4,
+                      "positionSecond": 8,
+                      "first": {
+                        "id": "c_3_1",
+                        "text": "To be"
+                      },
+                      "second": {
+                        "id": "c_3_2",
+                        "text": "Ser / Estar"
+                      }
+                    }
                   ]
                 }
               ]
             },
             {
-              "lessonId": "les_8d1809",
+              "lessonId": "les_d7fcd3",
               "number": 2,
-              "title": "Lição 2",
-              "exercicios": [
-                {
-                  "type": "ExercicioTraducao",
-                  "exerciseId": "ex_81dae6",
-                  "exerciseTitle": "Novo Exercício",
-                  "frontText": "The yellow bird",
-                  "position": 1,
-                  "correctTexts": [
-                    "O pássaro amarelo"
-                  ]
-                },
-                {
-                  "type": "ExercicioTraducao",
-                  "exerciseId": "ex_cc9caf",
-                  "exerciseTitle": "Novo Exercício",
-                  "frontText": "The blue bird",
-                  "position": 2,
-                  "correctTexts": [
-                    "O pássaro azul"
-                  ]
-                }
-              ]
+              "title": "Qual o seu nome?",
+              "exercicios": []
+            },
+            {
+              "lessonId": "les_c8b940",
+              "number": 3,
+              "title": "Eu sou",
+              "exercicios": []
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Unidade 1",
+          "licoes": [
+            {
+              "lessonId": "les_539522",
+              "number": 1,
+              "title": "O verbo to be",
+              "exercicios": []
+            },
+            {
+              "lessonId": "les_b40fd0",
+              "number": 2,
+              "title": "Tempo verbal: presente",
+              "exercicios": []
             }
           ]
         }
       ]
     },
-    "lang_055cb7b6": {
-      "languageId": "lang_055cb7b6",
-      "name": "Japonês",
+    "lang_1afc8d5c": {
+      "languageId": "lang_1afc8d5c",
+      "name": "Francês",
       "unidades": [
         {
           "number": 1,
-          "title": "Unidade teste",
+          "title": "Unidade 0",
           "licoes": [
             {
-              "lessonId": "les_a7dd78",
+              "lessonId": "les_ed0add",
               "number": 1,
-              "title": "Lição 1",
-              "exercicios": [
-                {
-                  "type": "RevisaoVocabulario",
-                  "exerciseId": "ex_a488e8",
-                  "exerciseTitle": "Flashcard 1",
-                  "frontText": "水",
-                  "position": 1,
-                  "backText": "Água"
-                },
-                {
-                  "type": "RevisaoVocabulario",
-                  "exerciseId": "ex_c6e91b",
-                  "exerciseTitle": "Flashcard 2",
-                  "frontText": "土",
-                  "position": 2,
-                  "backText": "Terra"
-                },
-                {
-                  "type": "RevisaoVocabulario",
-                  "exerciseId": "ex_961618",
-                  "exerciseTitle": "Flashcard 3",
-                  "frontText": "火",
-                  "position": 3,
-                  "backText": "Fogo"
-                },
-                {
-                  "type": "RevisaoVocabulario",
-                  "exerciseId": "ex_5affaf",
-                  "exerciseTitle": "Flashcard 4",
-                  "frontText": "風",
-                  "position": 4,
-                  "backText": "Vento"
-                },
-                {
-                  "type": "RevisaoVocabulario",
-                  "exerciseId": "ex_56576f",
-                  "exerciseTitle": "Flashcard 5",
-                  "frontText": "世界",
-                  "position": 5,
-                  "backText": "Mundo"
-                }
-              ]
+              "title": "Meu nome é",
+              "exercicios": []
+            },
+            {
+              "lessonId": "les_e3b86c",
+              "number": 2,
+              "title": "Qual o seu nome?",
+              "exercicios": []
+            },
+            {
+              "lessonId": "les_b08cbb",
+              "number": 3,
+              "title": "Eu sou",
+              "exercicios": []
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Unidade 1",
+          "licoes": [
+            {
+              "lessonId": "les_35e5f1",
+              "number": 1,
+              "title": "O verbo être",
+              "exercicios": []
+            },
+            {
+              "lessonId": "les_f0f704",
+              "number": 2,
+              "title": "Tempo verbal: presente",
+              "exercicios": []
             }
           ]
         }
