@@ -146,11 +146,12 @@
         }
       }
     },
-    "9ae0f04e-f7c8-4c08-a96f-286191728463": {
-      "userId": "9ae0f04e-f7c8-4c08-a96f-286191728463",
+    "227a1016-68dc-4aa7-9fc5-c579db29e252": {
+      "userId": "227a1016-68dc-4aa7-9fc5-c579db29e252",
       "email": "victor@victor.victor",
       "username": "victor",
-      "passwordHash": "be4a60aae6ed448f1d19ce0acd3c3990967850e8c380415fc7b4b0b8b632b63c",
+      "passwordHash": "0e293bbe3731f70e6ba109e01fbc6ec3b695e45ef1c3f9cc727f560ddb41f982",
+      "passwordSalt": "90368c03e0566453cb28207864cba238",
       "birthdate": "2000-10-10",
       "registrationDate": "2026-11-17",
       "streak": 0,
@@ -161,11 +162,12 @@
       "amizadesDetalhes": {},
       "progress": {}
     },
-    "f0fb4c80-d0ce-4296-8e37-7f962b025f44": {
-      "userId": "f0fb4c80-d0ce-4296-8e37-7f962b025f44",
+    "4ec83152-5543-4dce-ae84-d83cf708c009": {
+      "userId": "4ec83152-5543-4dce-ae84-d83cf708c009",
       "email": "vinicius@vinicius.vinicius",
       "username": "vinicius",
-      "passwordHash": "fe14aed62077acc41d7a9024cea9600af10fbf680bb9e414c56927337238a50d",
+      "passwordHash": "d57ef1e8b3d30b99ae47ac5f635f8fb7cdc1d1414b637021822c11a70bcc00bd",
+      "passwordSalt": "57d388982d458d7b6c6b38cfff185dd6",
       "birthdate": "2000-10-10",
       "registrationDate": "2026-11-17",
       "streak": 0,
@@ -176,11 +178,12 @@
       "amizadesDetalhes": {},
       "progress": {}
     },
-    "c57b3a07-8818-41c2-8191-1b1ce643ce4b": {
-      "userId": "c57b3a07-8818-41c2-8191-1b1ce643ce4b",
+    "775cdfba-db65-4faa-a103-a4fb835030e1": {
+      "userId": "775cdfba-db65-4faa-a103-a4fb835030e1",
       "email": "aldorocha@aldorocha.aldorocha",
       "username": "aldorocha",
-      "passwordHash": "1a83d1fed2147548e76d2c68662cc542261b88a35bd4347747d601c332821f5d",
+      "passwordHash": "45cf8bfdf455cc132ef5a4bbf686b9fd3d9347b10dbc0dfb78164aaf80e503ad",
+      "passwordSalt": "adc81b33bb266c1566cc4db1bcc11fee",
       "birthdate": "1900-10-10",
       "registrationDate": "2026-11-17",
       "streak": 0,

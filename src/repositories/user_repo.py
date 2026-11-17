@@ -64,11 +64,12 @@ class UserRepository(BaseRepository):
                     sessaoSrs=sessao
                 )
 
-            alunos_instanciados[user_id] = Aluno(
+            aluno_obj = Aluno(
                 userId=a_data["userId"],
                 email=a_data["email"],
                 username=a_data["username"],
                 passwordHash=a_data["passwordHash"],
+                passwordSalt=a_data.get("passwordSalt", ""),
                 birthdate=a_data["birthdate"],
                 registrationDate=a_data["registrationDate"],
                 streak=a_data.get("streak", 0),
@@ -79,6 +80,27 @@ class UserRepository(BaseRepository):
                 amizadesDetalhes=amizades,
                 progress=progress_dict
             )
+
+
+            if aluno_obj.lastActivityDate and aluno_obj.streak > 0:
+                dias_sem_estudar = (date.today() - date.fromisoformat(aluno_obj.lastActivityDate)).days
+                if dias_sem_estudar > 1:
+                    aluno_obj.resetStreak()
+                    for amz in aluno_obj.amizadesDetalhes.values():
+                        amz.resetFriendStreak()
+                    self.save_aluno(aluno_obj)
+
+            alunos_instanciados[user_id] = aluno_obj
+
+        for aluno in alunos_instanciados.values():
+            atualizou = False
+            for amigo_id, amz in aluno.amizadesDetalhes.items():
+                amigo = alunos_instanciados.get(amigo_id)
+                if amz.friendStreak > 0 and (not amigo or amigo.streak == 0):
+                    amz.resetFriendStreak()
+                    atualizou = True
+            if atualizou:
+                self.save_aluno(aluno)
             
         return alunos_instanciados
 
@@ -93,6 +115,7 @@ class UserRepository(BaseRepository):
                 email=ad_data["email"],
                 username=ad_data["username"],
                 passwordHash=ad_data["passwordHash"],
+                passwordSalt=ad_data.get("passwordSalt", ""),
                 birthdate=ad_data["birthdate"],
                 registrationDate=ad_data["registrationDate"]
             )
@@ -166,6 +189,7 @@ class UserRepository(BaseRepository):
             "email": aluno.email,
             "username": aluno.username,
             "passwordHash": aluno.passwordHash,
+            "passwordSalt": aluno.passwordSalt,
             "birthdate": aluno.birthdate,
             "registrationDate": aluno.registrationDate,
             "streak": aluno.streak,
@@ -189,6 +213,7 @@ class UserRepository(BaseRepository):
             "email": admin.email,
             "username": admin.username,
             "passwordHash": admin.passwordHash,
+            "passwordSalt": admin.passwordSalt,
             "birthdate": admin.birthdate,
             "registrationDate": admin.registrationDate
         }

@@ -150,10 +150,10 @@ class AuthController:
     def update_password(self, new_password: str) -> Tuple[bool, str]:
         if not self.current_user or isinstance(self.current_user, Admin): return False, "Sessão inválida."
         if len(new_password) < 6: return False, "Senha muito curta."
-        self.current_user.passwordHash = hashlib.sha256(new_password.encode('utf-8')).hexdigest()
+        self.current_user.changePassword(new_password)
         if self.user_repo.save_aluno(self.current_user): return True, "Senha atualizada!"
         return False, "Erro ao salvar."
-
+    
     def reset_progress(self) -> Tuple[bool, str]:
         if not self.current_user or isinstance(self.current_user, Admin): return False, "Ação inválida."
         # Usa o método de reset unificado do modelo UML
@@ -184,8 +184,16 @@ class AuthController:
         if self.user_repo.get_user_by_email(email) is not None: return False, "E-mail já existe."
 
         new_id = f"admin_{uuid.uuid4().hex[:8]}"
-        hashed_password = hashlib.sha256(password.encode('utf-8')).hexdigest()
-        novo_admin = Admin(userId=new_id, email=email, username="Admin", passwordHash=hashed_password, birthdate="1900-01-01", registrationDate=date.today().isoformat())
+        pw_hash, pw_salt = hash_password_with_salt(password)
+        novo_admin = Admin(
+            userId=new_id,
+            email=email,
+            username="Admin",
+            passwordHash=pw_hash,
+            passwordSalt=pw_salt,
+            birthdate="1900-01-01",
+            registrationDate=date.today().isoformat()
+        )
         
         if self.user_repo.save_admin(novo_admin): return True, "Administrador registrado!"
         return False, "Erro ao salvar."
