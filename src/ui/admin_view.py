@@ -22,6 +22,94 @@ class AdminView(tk.Frame):
         
         self.render_main_menu()
 
+    def _create_password_entry(self, parent, label_text):
+        f = tk.Frame(parent, bg=BG_COLOR)
+        f.pack(fill=tk.X, pady=10, padx=80)
+        tk.Label(f, text=label_text, font=("Arial", 12), bg=BG_COLOR, fg="#aaaaaa").pack(anchor="w")
+        e = tk.Entry(f, font=("Arial", 16), bg=BG_COLOR, fg=FG_COLOR, relief=tk.FLAT, insertbackground=FG_COLOR, show="*")
+        e.pack(fill=tk.X, pady=5)
+        tk.Frame(f, bg="#555555", height=1).pack(fill=tk.X)
+        return e
+
+    def render_change_email(self):
+        self.clear_content()
+        tk.Label(self.content_frame, text="Painel de Admin\nAlterar E-mail", font=("Arial", 16, "bold"), bg=BG_COLOR, fg=FG_COLOR, justify=tk.LEFT).pack(anchor="w", padx=40, pady=(30, 10))
+        
+        atual = self.auth_controller.current_user.email if self.auth_controller.current_user else ""
+        tk.Label(self.content_frame, text=f"E-mail atual: {atual}", font=("Arial", 12), bg=BG_COLOR, fg="#aaaaaa").pack(anchor="w", padx=80, pady=(0, 10))
+        
+        e_email = self._create_entry(self.content_frame, "Novo E-mail")
+
+        f_btns = tk.Frame(self.content_frame, bg=BG_COLOR)
+        f_btns.pack(fill=tk.X, pady=30, padx=80)
+        tk.Button(f_btns, text="Cancelar", font=("Arial", 12, "bold"), bg=BTN_BG, fg=FG_COLOR, relief=tk.FLAT, command=self.render_main_menu).pack(side=tk.LEFT, ipadx=20, ipady=5)
+
+        def on_save():
+            novo = e_email.get().strip()
+            if novo == "Novo E-mail":
+                novo = ""
+            suc, msg = self.auth_controller.update_email(novo)
+            if suc:
+                messagebox.showinfo("Sucesso", msg)
+                self.render_main_menu()
+            else:
+                messagebox.showerror("Erro", msg)
+
+        tk.Button(f_btns, text="Salvar", font=("Arial", 12, "bold"), bg="#4caf50", fg="white", relief=tk.FLAT, command=on_save).pack(side=tk.RIGHT, ipadx=20, ipady=5)
+
+    def render_change_password(self):
+        self.clear_content()
+        tk.Label(self.content_frame, text="Painel de Admin\nAlterar Senha", font=("Arial", 16, "bold"), bg=BG_COLOR, fg=FG_COLOR, justify=tk.LEFT).pack(anchor="w", padx=40, pady=(30, 10))
+
+        e_atual = self._create_password_entry(self.content_frame, "Senha Atual")
+        e_nova = self._create_password_entry(self.content_frame, "Nova Senha (mín. 6 caracteres)")
+        e_conf = self._create_password_entry(self.content_frame, "Confirmar Nova Senha")
+
+        f_btns = tk.Frame(self.content_frame, bg=BG_COLOR)
+        f_btns.pack(fill=tk.X, pady=30, padx=80)
+        tk.Button(f_btns, text="Cancelar", font=("Arial", 12, "bold"), bg=BTN_BG, fg=FG_COLOR, relief=tk.FLAT, command=self.render_main_menu).pack(side=tk.LEFT, ipadx=20, ipady=5)
+
+        def on_save():
+            user = self.auth_controller.current_user
+            if not user or not user.authenticate(e_atual.get()):
+                return messagebox.showerror("Erro", "Senha atual incorreta.")
+            nova = e_nova.get()
+            if nova != e_conf.get():
+                return messagebox.showerror("Erro", "A nova senha e a confirmação não coincidem.")
+            suc, msg = self.auth_controller.update_password(nova)
+            if suc:
+                messagebox.showinfo("Sucesso", msg)
+                self.render_main_menu()
+            else:
+                messagebox.showerror("Erro", msg)
+
+        tk.Button(f_btns, text="Salvar", font=("Arial", 12, "bold"), bg="#4caf50", fg="white", relief=tk.FLAT, command=on_save).pack(side=tk.RIGHT, ipadx=20, ipady=5)
+
+    def render_register_admin(self):
+        self.clear_content()
+        tk.Label(self.content_frame, text="Painel de Admin\nRegistrar Novo Administrador", font=("Arial", 16, "bold"), bg=BG_COLOR, fg=FG_COLOR, justify=tk.LEFT).pack(anchor="w", padx=40, pady=(30, 10))
+
+        e_email = self._create_entry(self.content_frame, "E-mail do Novo Admin")
+        e_senha = self._create_password_entry(self.content_frame, "Senha (mín. 6 caracteres)")
+        e_conf = self._create_password_entry(self.content_frame, "Confirmar Senha")
+
+        f_btns = tk.Frame(self.content_frame, bg=BG_COLOR)
+        f_btns.pack(fill=tk.X, pady=30, padx=80)
+        tk.Button(f_btns, text="Cancelar", font=("Arial", 12, "bold"), bg=BTN_BG, fg=FG_COLOR, relief=tk.FLAT, command=self.render_main_menu).pack(side=tk.LEFT, ipadx=20, ipady=5)
+
+        def on_register():
+            email = e_email.get().strip()
+            if email == "E-mail do Novo Admin":
+                email = ""
+            suc, msg = self.auth_controller.register_admin(email, e_senha.get(), e_conf.get())
+            if suc:
+                messagebox.showinfo("Sucesso", msg)
+                self.render_main_menu()
+            else:
+                messagebox.showerror("Erro", msg)
+
+        tk.Button(f_btns, text="Registrar", font=("Arial", 12, "bold"), bg="#4caf50", fg="white", relief=tk.FLAT, command=on_register).pack(side=tk.RIGHT, ipadx=20, ipady=5)
+
     def clear_content(self):
         for widget in self.content_frame.winfo_children():
             widget.destroy()
@@ -37,7 +125,6 @@ class AdminView(tk.Frame):
         tk.Frame(f, bg="#555555", height=1).pack(fill=tk.X)
         return e
 
-    # --- SLIDE 31: MENU PRINCIPAL ---
     def render_main_menu(self):
         self.clear_content()
         tk.Label(self.content_frame, text="Painel de Admin", font=("Arial", 20, "bold"), bg=BG_COLOR, fg=FG_COLOR).pack(pady=(40, 40))
@@ -54,12 +141,10 @@ class AdminView(tk.Frame):
 
         col2 = tk.Frame(grid_frame, bg=BG_COLOR)
         col2.grid(row=0, column=1, padx=20)
-        tk.Button(col2, text="Alterar E-mail", font=("Arial", 14), bg=BTN_BG, fg=FG_COLOR, relief=tk.FLAT, width=25, command=lambda: messagebox.showinfo("Info", "Disponível na aba Perfil.")).pack(pady=15, ipady=5)
-        tk.Button(col2, text="Alterar Senha", font=("Arial", 14), bg=BTN_BG, fg=FG_COLOR, relief=tk.FLAT, width=25, command=lambda: messagebox.showinfo("Info", "Disponível na aba Perfil.")).pack(pady=15, ipady=5)
-        tk.Button(col2, text="Registrar Admin", font=("Arial", 14), bg=BTN_BG, fg=FG_COLOR, relief=tk.FLAT, width=25, command=lambda: messagebox.showinfo("Info", "Criação de admin.")).pack(pady=15, ipady=5)
+        tk.Button(col2, text="Alterar E-mail", font=("Arial", 14), bg=BTN_BG, fg=FG_COLOR, relief=tk.FLAT, width=25, command=self.render_change_email).pack(pady=15, ipady=5)
+        tk.Button(col2, text="Alterar Senha", font=("Arial", 14), bg=BTN_BG, fg=FG_COLOR, relief=tk.FLAT, width=25, command=self.render_change_password).pack(pady=15, ipady=5)
+        tk.Button(col2, text="Registrar Admin", font=("Arial", 14), bg=BTN_BG, fg=FG_COLOR, relief=tk.FLAT, width=25, command=self.render_register_admin).pack(pady=15, ipady=5)
         tk.Button(col2, text="Sair", font=("Arial", 14), bg=BTN_BG, fg=FG_COLOR, relief=tk.FLAT, width=25, command=self.app_window.handle_logout).pack(pady=15, ipady=5)
-
-    # --- GERENCIAR IDIOMAS ---
     def render_manage_languages(self):
         self.clear_content()
         tk.Label(self.content_frame, text="Painel de Admin\nID do Idioma", font=("Arial", 16, "bold"), bg=BG_COLOR, fg=FG_COLOR, justify=tk.LEFT).pack(anchor="w", padx=40, pady=20)
@@ -94,7 +179,6 @@ class AdminView(tk.Frame):
             else: messagebox.showerror("Erro", msg)
         tk.Button(f_btns, text="Adicionar", font=("Arial", 12, "bold"), bg="#4caf50", fg="white", relief=tk.FLAT, command=on_add).pack(side=tk.RIGHT, ipadx=20, ipady=5)
 
-    # --- GERENCIAR UNIDADES ---
     def render_manage_units(self):
         self.clear_content()
         tk.Label(self.content_frame, text="Painel de Admin\nSelecione um Idioma", font=("Arial", 16, "bold"), bg=BG_COLOR, fg=FG_COLOR, justify=tk.LEFT).pack(anchor="w", padx=40, pady=20)
@@ -141,7 +225,6 @@ class AdminView(tk.Frame):
             else: messagebox.showerror("Erro", msg)
         tk.Button(f_btns, text="Adicionar", font=("Arial", 12, "bold"), bg="#4caf50", fg="white", relief=tk.FLAT, command=on_add).pack(side=tk.RIGHT, ipadx=20, ipady=5)
 
-    # --- GERENCIAR LIÇÕES ---
     def render_manage_lessons(self):
         self.clear_content()
         tk.Label(self.content_frame, text="Painel de Admin\nSelecione um Idioma", font=("Arial", 16, "bold"), bg=BG_COLOR, fg=FG_COLOR, justify=tk.LEFT).pack(anchor="w", padx=40, pady=20)
@@ -200,7 +283,6 @@ class AdminView(tk.Frame):
             else: messagebox.showerror("Erro", msg)
         tk.Button(f_btns, text="Adicionar", font=("Arial", 12, "bold"), bg="#4caf50", fg="white", relief=tk.FLAT, command=on_add).pack(side=tk.RIGHT, ipadx=20, ipady=5)
 
-    # --- GERENCIAR EXERCÍCIOS ---
     def render_manage_exercises(self):
         self.clear_content()
         tk.Label(self.content_frame, text="Painel de Admin\nSelecione um Idioma para Exercícios", font=("Arial", 16, "bold"), bg=BG_COLOR, fg=FG_COLOR, justify=tk.LEFT).pack(anchor="w", padx=40, pady=20)
@@ -250,7 +332,6 @@ class AdminView(tk.Frame):
             tk.Label(row, text=f"{idx+1:03d}", font=("Arial", 12), bg=BG_COLOR, fg="#aaaaaa", width=5).pack(side=tk.LEFT)
             tk.Label(row, text=f"Ex {idx+1} ({ex.get('type', 'Novo')})", font=("Arial", 14), bg=BG_COLOR, fg=FG_COLOR).pack(side=tk.LEFT, padx=10)
             
-            # Botão de Remover
             def del_cmd(e_id=ex['exerciseId']):
                 if messagebox.askyesno("Confirmar", "Remover exercício?"):
                     suc, msg = self.admin_controller.delete_exercise(lang_id, unit_num, lesson_id, e_id)
@@ -258,7 +339,6 @@ class AdminView(tk.Frame):
                     else: messagebox.showerror("Erro", msg)
                     
             tk.Button(row, text="Remover", bg="#f44336", fg="white", relief=tk.FLAT, command=del_cmd).pack(side=tk.RIGHT)
-            # Botão de Editar
             tk.Button(row, text="Editar", bg="#2196f3", fg="white", relief=tk.FLAT, command=lambda ex_id=ex['exerciseId']: self.render_edit_exercise(lang_id, unit_num, lesson_id, ex_id)).pack(side=tk.RIGHT, padx=(0, 10))
             
             tk.Frame(scroll_frame, bg="#333333", height=1).pack(fill=tk.X, pady=5)
@@ -281,11 +361,9 @@ class AdminView(tk.Frame):
             else: messagebox.showerror("Erro", msg)
         tk.Button(f_btns, text="Adicionar", font=("Arial", 12, "bold"), bg="#4caf50", fg="white", relief=tk.FLAT, command=on_add).pack(side=tk.RIGHT, ipadx=20, ipady=5)
 
-    # --- FORMULÁRIO DINÂMICO DE EDIÇÃO DE EXERCÍCIOS ---
     def render_edit_exercise(self, lang_id, unit_num, lesson_id, ex_id):
         self.clear_content()
         
-        # Envolve tudo num Canvas e Scrollbar para evitar que os botões se escondam
         canvas = tk.Canvas(self.content_frame, bg=BG_COLOR, highlightthickness=0)
         scrollbar = tk.Scrollbar(self.content_frame, orient="vertical", command=canvas.yview)
         scroll_frame = tk.Frame(canvas, bg=BG_COLOR)
@@ -299,7 +377,6 @@ class AdminView(tk.Frame):
 
         tk.Label(scroll_frame, text="Painel de Admin\nEditar Exercício", font=("Arial", 16, "bold"), bg=BG_COLOR, fg=FG_COLOR, justify=tk.LEFT).pack(anchor="w", pady=20)
         
-        # Recupera dados atuais (se existirem) para preencher, senão deixa vazio
         idioma = self.admin_controller.get_all_languages().get(lang_id, {})
         unidade = next((u for u in idioma.get("unidades", []) if u["number"] == unit_num), {})
         licao = next((l for l in unidade.get("licoes", []) if l["lessonId"] == lesson_id), {})

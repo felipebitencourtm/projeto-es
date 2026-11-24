@@ -138,20 +138,37 @@ class AuthController:
         return self.current_user is not None
 
     def update_email(self, new_email: str) -> Tuple[bool, str]:
-        if not self.current_user or isinstance(self.current_user, Admin): return False, "Sessão inválida."
+        if not self.current_user:
+            return False, "Sessão inválida."
         new_email = new_email.strip().lower()
-        if not new_email or not re.match(r"^[\w\.-]+@[\w\.-]+\.\w+$", new_email): return False, "E-mail inválido."
-        if any(u.email == new_email and u.userId != self.current_user.userId for u in self.user_repo.get_all_alunos().values()):
+        if not new_email or not re.match(r"^[\w\.-]+@[\w\.-]+\.\w+$", new_email):
+            return False, "E-mail inválido."
+        existing = self.user_repo.get_user_by_email(new_email)
+        if existing and existing.userId != self.current_user.userId:
             return False, "E-mail em uso."
         self.current_user.changeEmail(new_email)
-        if self.user_repo.save_aluno(self.current_user): return True, "E-mail atualizado!"
+        saved = (
+            self.user_repo.save_admin(self.current_user)
+            if isinstance(self.current_user, Admin)
+            else self.user_repo.save_aluno(self.current_user)
+        )
+        if saved:
+            return True, "E-mail atualizado!"
         return False, "Erro ao salvar."
 
     def update_password(self, new_password: str) -> Tuple[bool, str]:
-        if not self.current_user or isinstance(self.current_user, Admin): return False, "Sessão inválida."
-        if len(new_password) < 6: return False, "Senha muito curta."
+        if not self.current_user:
+            return False, "Sessão inválida."
+        if len(new_password) < 6:
+            return False, "Senha muito curta (mínimo 6 caracteres)."
         self.current_user.changePassword(new_password)
-        if self.user_repo.save_aluno(self.current_user): return True, "Senha atualizada!"
+        saved = (
+            self.user_repo.save_admin(self.current_user)
+            if isinstance(self.current_user, Admin)
+            else self.user_repo.save_aluno(self.current_user)
+        )
+        if saved:
+            return True, "Senha atualizada!"
         return False, "Erro ao salvar."
     
     def reset_progress(self) -> Tuple[bool, str]:

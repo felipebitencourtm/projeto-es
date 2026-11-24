@@ -5,9 +5,10 @@
       "email": "felipe@felipe.felipe",
       "username": "felipe",
       "passwordHash": "2bd2d3a31934d76198acc030caca4c31965474fe5fa48f35fef79d0fd74ee1b2",
+      "passwordSalt": "",
       "birthdate": "2000-10-10",
       "registrationDate": "2026-10-22",
-      "streak": 1,
+      "streak": 0,
       "longestStreak": 2,
       "lastActivityDate": "2026-11-17",
       "friends": [],
@@ -198,11 +199,21 @@
   "admins": {
     "admin_01": {
       "userId": "admin_01",
-      "email": "admin@koilingo.com",
+      "email": "admin@koi.lingo",
       "username": "admin_mestre",
-      "passwordHash": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9",
+      "passwordHash": "cb615f4b3eb36c48d677e97b26b4db5661d14bd29ecba6eaecaaba2cd8d46839",
+      "passwordSalt": "7cf55344e5db17320ff0feb20aa6e117",
       "birthdate": "1990-01-01",
       "registrationDate": "2025-12-01"
+    },
+    "admin_487c5285": {
+      "userId": "admin_487c5285",
+      "email": "admin@koilingo.com",
+      "username": "Admin",
+      "passwordHash": "f5f3110f03cc06b0f95c020dc83c219f9c8f5326bbdb38853f73b18f2251f514",
+      "passwordSalt": "39238158ff2658d0d4d1c11dfb9a4c96",
+      "birthdate": "1900-01-01",
+      "registrationDate": "2026-11-24"
     }
   }
 }
