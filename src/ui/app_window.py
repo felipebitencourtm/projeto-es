@@ -39,11 +39,11 @@ class AppWindow(tk.Tk):
     def show_login(self):
         self.switch_view(LoginView, auth_controller=self.auth_controller, on_success_callback=self.show_dashboard)
 
-    def show_dashboard(self):
+    def show_dashboard(self, lang_id: str = None):
         if isinstance(self.auth_controller.current_user, Admin):
             self.switch_view(AdminView, app_window=self, admin_controller=self.admin_controller)
         else:
-            self.switch_view(DashboardView, app_window=self)
+            self.switch_view(DashboardView, app_window=self, initial_lang_id=lang_id)
         
     def show_social(self):
         self.switch_view(SocialView, app_window=self, social_controller=self.social_controller)
@@ -68,8 +68,7 @@ class AppWindow(tk.Tk):
                 
                 self.current_view.clear_view()
                 tk.Label(self.current_view, text="Lição Concluída!", font=("Arial", 24, "bold"), bg="#2d2d2d", fg="#4caf50").pack(pady=50)
-                tk.Button(self.current_view, text="Voltar ao Menu", font=("Arial", 14), bg="#404040", fg="white", command=self.show_dashboard, relief=tk.FLAT).pack(pady=30)
-                
+                tk.Button(self.current_view, text="Voltar ao Menu", font=("Arial", 14), bg="#404040", fg="white", command=lambda: self.show_dashboard(lang_id), relief=tk.FLAT).pack(pady=30)                
             self.current_view.show_completion_screen = custom_completion
         else:
             import tkinter.messagebox as mb
@@ -89,7 +88,7 @@ class AppWindow(tk.Tk):
                 
                 self.current_view.clear_view()
                 tk.Label(self.current_view, text="Sessão Encerrada!", font=("Arial", 24, "bold"), bg="#2d2d2d", fg="#ff9800").pack(pady=50)
-                tk.Button(self.current_view, text="Voltar ao Menu", font=("Arial", 14), bg="#404040", fg="white", command=self.show_dashboard, relief=tk.FLAT).pack(pady=30)
+                tk.Button(self.current_view, text="Voltar ao Menu", font=("Arial", 14), bg="#404040", fg="white", command=lambda: self.show_dashboard(lang_id), relief=tk.FLAT).pack(pady=30)                
                 
             self.current_view.show_completion_screen = custom_completion
             

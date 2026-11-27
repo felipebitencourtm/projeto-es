@@ -9,7 +9,7 @@ FONT_TITLE = ("Arial", 20, "bold")
 FONT_TEXT = ("Arial", 14)
 
 class DashboardView(tk.Frame):
-    def __init__(self, parent, app_window):
+    def __init__(self, parent, app_window, initial_lang_id: str = None):
         super().__init__(parent, bg=BG_COLOR)
         self.app_window = app_window
         self.auth_controller = app_window.auth_controller
@@ -21,7 +21,11 @@ class DashboardView(tk.Frame):
         self.content_frame = tk.Frame(self, bg=BG_COLOR)
         self.content_frame.pack(fill=tk.BOTH, expand=True, padx=20, pady=20)
         
-        self.render_languages()
+        idiomas = self.course_repo.read_data().get("idiomas", {})
+        if initial_lang_id and initial_lang_id in idiomas:
+            self.render_lessons(initial_lang_id, idiomas[initial_lang_id])
+        else:
+            self.render_languages()
 
     def render_header(self):
         header = tk.Frame(self, bg="#1e1e1e", height=60)

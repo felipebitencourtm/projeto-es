@@ -1,152 +1,5 @@
 {
   "alunos": {
-    "977936a2-79d8-49de-b451-a313b2a142eb": {
-      "userId": "977936a2-79d8-49de-b451-a313b2a142eb",
-      "email": "felipe@felipe.felipe",
-      "username": "felipe",
-      "passwordHash": "2bd2d3a31934d76198acc030caca4c31965474fe5fa48f35fef79d0fd74ee1b2",
-      "passwordSalt": "",
-      "birthdate": "2000-10-10",
-      "registrationDate": "2026-10-22",
-      "streak": 0,
-      "longestStreak": 2,
-      "lastActivityDate": "2026-11-17",
-      "friends": [],
-      "pedidosDeAmizade": [],
-      "amizadesDetalhes": {},
-      "progress": {
-        "lang_en": {
-          "languageId": "lang_en",
-          "lastCompletedLessonId": "les_en_1_1",
-          "licoes": {
-            "les_en_1_1": {
-              "lessonId": "les_en_1_1",
-              "complete": true,
-              "completionDate": "2026-11-03"
-            },
-            "les_8d1809": {
-              "lessonId": "les_8d1809",
-              "complete": true,
-              "completionDate": "2026-10-23"
-            }
-          },
-          "sessaoSrs": {
-            "sessionDate": "2026-10-23",
-            "cards": {
-              "alt_ex_alt_01": {
-                "reviewId": "alt_ex_alt_01",
-                "lastRecalledDate": "2026-10-24",
-                "easeFactor": 2.5,
-                "repetitions": 2,
-                "interval": 6
-              },
-              "alt_rev_alt_01": {
-                "reviewId": "alt_rev_alt_01",
-                "lastRecalledDate": "2026-10-24",
-                "easeFactor": 2.5,
-                "repetitions": 1,
-                "interval": 1
-              }
-            }
-          }
-        },
-        "lang_055cb7b6": {
-          "languageId": "lang_055cb7b6",
-          "lastCompletedLessonId": "les_a7dd78",
-          "licoes": {
-            "les_a7dd78": {
-              "lessonId": "les_a7dd78",
-              "complete": true,
-              "completionDate": "2026-10-24"
-            }
-          },
-          "sessaoSrs": {
-            "sessionDate": "2026-10-24",
-            "cards": {
-              "ex_a488e8": {
-                "reviewId": "ex_a488e8",
-                "lastRecalledDate": "2026-10-24",
-                "easeFactor": 2.5,
-                "repetitions": 1,
-                "interval": 1
-              },
-              "ex_c6e91b": {
-                "reviewId": "ex_c6e91b",
-                "lastRecalledDate": "2026-10-24",
-                "easeFactor": 2.6,
-                "repetitions": 1,
-                "interval": 1
-              },
-              "ex_961618": {
-                "reviewId": "ex_961618",
-                "lastRecalledDate": "2026-10-24",
-                "easeFactor": 2.3,
-                "repetitions": 1,
-                "interval": 1
-              },
-              "ex_5affaf": {
-                "reviewId": "ex_5affaf",
-                "lastRecalledDate": "2026-10-24",
-                "easeFactor": 2.3,
-                "repetitions": 1,
-                "interval": 1
-              },
-              "ex_56576f": {
-                "reviewId": "ex_56576f",
-                "lastRecalledDate": "2026-10-24",
-                "easeFactor": 2.3,
-                "repetitions": 1,
-                "interval": 1
-              }
-            }
-          }
-        },
-        "lang_7bca21b3": {
-          "languageId": "lang_7bca21b3",
-          "lastCompletedLessonId": "les_05f3d5",
-          "licoes": {
-            "les_05f3d5": {
-              "lessonId": "les_05f3d5",
-              "complete": true,
-              "completionDate": "2026-11-17"
-            }
-          },
-          "sessaoSrs": {
-            "sessionDate": "2026-11-17",
-            "cards": {
-              "ex_89e326": {
-                "reviewId": "ex_89e326",
-                "lastRecalledDate": "2026-11-17",
-                "easeFactor": 2.5,
-                "repetitions": 1,
-                "interval": 1
-              },
-              "ex_c15736": {
-                "reviewId": "ex_c15736",
-                "lastRecalledDate": "2026-11-17",
-                "easeFactor": 2.5,
-                "repetitions": 1,
-                "interval": 1
-              },
-              "ex_4ec950": {
-                "reviewId": "ex_4ec950",
-                "lastRecalledDate": "2026-11-17",
-                "easeFactor": 2.5,
-                "repetitions": 1,
-                "interval": 1
-              },
-              "alt_ex_1b0099": {
-                "reviewId": "alt_ex_1b0099",
-                "lastRecalledDate": "2026-11-17",
-                "easeFactor": 2.5,
-                "repetitions": 1,
-                "interval": 1
-              }
-            }
-          }
-        }
-      }
-    },
     "227a1016-68dc-4aa7-9fc5-c579db29e252": {
       "userId": "227a1016-68dc-4aa7-9fc5-c579db29e252",
       "email": "victor@victor.victor",
@@ -194,6 +47,128 @@
       "pedidosDeAmizade": [],
       "amizadesDetalhes": {},
       "progress": {}
+    },
+    "2848c56c-1df0-49fb-9995-a35e30043c9e": {
+      "userId": "2848c56c-1df0-49fb-9995-a35e30043c9e",
+      "email": "carolina@carolina.carolina",
+      "username": "carolina",
+      "passwordHash": "d0a5dfb4066112d9668e18bf28b469adcb3698066e8b85c0994aece5de6a9639",
+      "passwordSalt": "9ea8285606cfc73821621ce2ad3b7c41",
+      "birthdate": "2005-07-14",
+      "registrationDate": "2026-11-25",
+      "streak": 1,
+      "longestStreak": 1,
+      "lastActivityDate": "2026-11-25",
+      "friends": [],
+      "pedidosDeAmizade": [],
+      "amizadesDetalhes": {},
+      "progress": {
+        "lang_7bca21b3": {
+          "languageId": "lang_7bca21b3",
+          "lastCompletedLessonId": "les_05f3d5",
+          "licoes": {
+            "les_05f3d5": {
+              "lessonId": "les_05f3d5",
+              "complete": true,
+              "completionDate": "2026-11-25"
+            }
+          },
+          "sessaoSrs": {
+            "sessionDate": "2026-11-25",
+            "cards": {
+              "ex_89e326": {
+                "reviewId": "ex_89e326",
+                "lastRecalledDate": "2026-11-25",
+                "easeFactor": 2.6,
+                "repetitions": 1,
+                "interval": 1
+              },
+              "ex_c15736": {
+                "reviewId": "ex_c15736",
+                "lastRecalledDate": "2026-11-25",
+                "easeFactor": 2.6,
+                "repetitions": 1,
+                "interval": 1
+              },
+              "ex_4ec950": {
+                "reviewId": "ex_4ec950",
+                "lastRecalledDate": "2026-11-25",
+                "easeFactor": 2.6,
+                "repetitions": 1,
+                "interval": 1
+              },
+              "alt_ex_1b0099": {
+                "reviewId": "alt_ex_1b0099",
+                "lastRecalledDate": "",
+                "easeFactor": 2.5,
+                "repetitions": 0,
+                "interval": 0
+              }
+            }
+          }
+        }
+      }
+    },
+    "69a602c8-5295-453d-b82c-74a3b389b14e": {
+      "userId": "69a602c8-5295-453d-b82c-74a3b389b14e",
+      "email": "figueira@gmail.com",
+      "username": "figueira",
+      "passwordHash": "05ccfe201c3d7e9b9645c45af49b41e6aa469d3b7cc9337a0cafc7b17c489c28",
+      "passwordSalt": "1415d1766300d776a1cb2e948c3d1815",
+      "birthdate": "1900-10-10",
+      "registrationDate": "2026-11-25",
+      "streak": 1,
+      "longestStreak": 1,
+      "lastActivityDate": "2026-11-25",
+      "friends": [],
+      "pedidosDeAmizade": [],
+      "amizadesDetalhes": {},
+      "progress": {
+        "lang_7bca21b3": {
+          "languageId": "lang_7bca21b3",
+          "lastCompletedLessonId": "les_05f3d5",
+          "licoes": {
+            "les_05f3d5": {
+              "lessonId": "les_05f3d5",
+              "complete": true,
+              "completionDate": "2026-11-25"
+            }
+          },
+          "sessaoSrs": {
+            "sessionDate": "2026-11-25",
+            "cards": {
+              "ex_89e326": {
+                "reviewId": "ex_89e326",
+                "lastRecalledDate": "2026-11-25",
+                "easeFactor": 2.0999999999999996,
+                "repetitions": 1,
+                "interval": 1
+              },
+              "ex_c15736": {
+                "reviewId": "ex_c15736",
+                "lastRecalledDate": "2026-11-25",
+                "easeFactor": 2.4,
+                "repetitions": 1,
+                "interval": 1
+              },
+              "ex_4ec950": {
+                "reviewId": "ex_4ec950",
+                "lastRecalledDate": "2026-11-25",
+                "easeFactor": 2.3,
+                "repetitions": 1,
+                "interval": 1
+              },
+              "alt_ex_1b0099": {
+                "reviewId": "alt_ex_1b0099",
+                "lastRecalledDate": "2026-11-25",
+                "easeFactor": 2.5,
+                "repetitions": 1,
+                "interval": 1
+              }
+            }
+          }
+        }
+      }
     }
   },
   "admins": {
@@ -214,6 +189,15 @@
       "passwordSalt": "39238158ff2658d0d4d1c11dfb9a4c96",
       "birthdate": "1900-01-01",
       "registrationDate": "2026-11-24"
+    },
+    "admin_bda87c42": {
+      "userId": "admin_bda87c42",
+      "email": "aldo@koilingo.com",
+      "username": "Admin",
+      "passwordHash": "0109b72770dff70df916585acc50443a1c228134a9b994de22b1ff716ccdc874",
+      "passwordSalt": "33429f252c20b935614fea199a11ce01",
+      "birthdate": "1900-01-01",
+      "registrationDate": "2026-11-25"
     }
   }
 }

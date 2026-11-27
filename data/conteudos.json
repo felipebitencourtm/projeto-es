@@ -156,7 +156,69 @@
               "lessonId": "les_d7fcd3",
               "number": 2,
               "title": "Qual o seu nome?",
-              "exercicios": []
+              "exercicios": [
+                {
+                  "type": "ExercicioAlternativas",
+                  "exerciseId": "ex_0fd796",
+                  "exerciseTitle": "Qual dessas repostas seria uma resposta válida para a seguinte pergunta?",
+                  "frontText": "Hello, my name is Djulyan. What is your name?",
+                  "position": 1,
+                  "alternativas": [
+                    {
+                      "id": "alt_0",
+                      "text": "Yes, I am",
+                      "correct": false
+                    },
+                    {
+                      "id": "alt_1",
+                      "text": "No, I don't think so",
+                      "correct": false
+                    },
+                    {
+                      "id": "alt_2",
+                      "text": "My name is Marco",
+                      "correct": true
+                    },
+                    {
+                      "id": "alt_3",
+                      "text": "Your name is Djulyan",
+                      "correct": false
+                    }
+                  ]
+                },
+                {
+                  "type": "ExercicioTraducao",
+                  "exerciseId": "ex_410709",
+                  "exerciseTitle": "Novo Exercício",
+                  "frontText": "",
+                  "position": 2,
+                  "correctTexts": []
+                },
+                {
+                  "type": "ExercicioTraducao",
+                  "exerciseId": "ex_87d4f5",
+                  "exerciseTitle": "Novo Exercício",
+                  "frontText": "",
+                  "position": 3,
+                  "correctTexts": []
+                },
+                {
+                  "type": "ExercicioTraducao",
+                  "exerciseId": "ex_4a19f9",
+                  "exerciseTitle": "Novo Exercício",
+                  "frontText": "",
+                  "position": 4,
+                  "correctTexts": []
+                },
+                {
+                  "type": "ExercicioTraducao",
+                  "exerciseId": "ex_8682dd",
+                  "exerciseTitle": "Novo Exercício",
+                  "frontText": "",
+                  "position": 5,
+                  "correctTexts": []
+                }
+              ]
             },
             {
               "lessonId": "les_c8b940",
@@ -186,48 +248,55 @@
         }
       ]
     },
-    "lang_1afc8d5c": {
-      "languageId": "lang_1afc8d5c",
-      "name": "Francês",
+    "lang_adc3dd29": {
+      "languageId": "lang_adc3dd29",
+      "name": "Japonês",
       "unidades": [
         {
           "number": 1,
-          "title": "Unidade 0",
+          "title": "Alfabeto",
           "licoes": [
             {
-              "lessonId": "les_ed0add",
+              "lessonId": "les_bbd436",
               "number": 1,
-              "title": "Meu nome é",
-              "exercicios": []
+              "title": "1",
+              "exercicios": [
+                {
+                  "type": "ExercicioTraducao",
+                  "exerciseId": "ex_9d16ce",
+                  "exerciseTitle": "Novo Exercício",
+                  "frontText": "",
+                  "position": 1,
+                  "correctTexts": []
+                },
+                {
+                  "type": "ExercicioTraducao",
+                  "exerciseId": "ex_81d5ac",
+                  "exerciseTitle": "Novo Exercício",
+                  "frontText": "",
+                  "position": 2,
+                  "correctTexts": []
+                },
+                {
+                  "type": "ExercicioTraducao",
+                  "exerciseId": "ex_2fad6f",
+                  "exerciseTitle": "Novo Exercício",
+                  "frontText": "",
+                  "position": 3,
+                  "correctTexts": []
+                }
+              ]
             },
             {
-              "lessonId": "les_e3b86c",
+              "lessonId": "les_bebca6",
               "number": 2,
-              "title": "Qual o seu nome?",
+              "title": "2",
               "exercicios": []
             },
             {
-              "lessonId": "les_b08cbb",
+              "lessonId": "les_20f46d",
               "number": 3,
-              "title": "Eu sou",
-              "exercicios": []
-            }
-          ]
-        },
-        {
-          "number": 2,
-          "title": "Unidade 1",
-          "licoes": [
-            {
-              "lessonId": "les_35e5f1",
-              "number": 1,
-              "title": "O verbo être",
-              "exercicios": []
-            },
-            {
-              "lessonId": "les_f0f704",
-              "number": 2,
-              "title": "Tempo verbal: presente",
+              "title": "3",
               "exercicios": []
             }
           ]
