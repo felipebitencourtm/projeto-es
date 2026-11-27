@@ -56,7 +56,7 @@
       "passwordSalt": "9ea8285606cfc73821621ce2ad3b7c41",
       "birthdate": "2005-07-14",
       "registrationDate": "2026-11-25",
-      "streak": 1,
+      "streak": 0,
       "longestStreak": 1,
       "lastActivityDate": "2026-11-25",
       "friends": [],
@@ -117,7 +117,7 @@
       "passwordSalt": "1415d1766300d776a1cb2e948c3d1815",
       "birthdate": "1900-10-10",
       "registrationDate": "2026-11-25",
-      "streak": 1,
+      "streak": 0,
       "longestStreak": 1,
       "lastActivityDate": "2026-11-25",
       "friends": [],
@@ -169,6 +169,22 @@
           }
         }
       }
+    },
+    "1730012a-226a-4caf-a8ee-cff2a9aee50d": {
+      "userId": "1730012a-226a-4caf-a8ee-cff2a9aee50d",
+      "email": "felipe@felipe.felipe",
+      "username": "felipe",
+      "passwordHash": "ce074cc8ba698a8d2decff72ba266f70eebacecb90d97f919c42bb2bcaf562c6",
+      "passwordSalt": "7a30d89c1ad63d5ac2572987511ccae5",
+      "birthdate": "1000-10-10",
+      "registrationDate": "2026-11-27",
+      "streak": 0,
+      "longestStreak": 0,
+      "lastActivityDate": null,
+      "friends": [],
+      "pedidosDeAmizade": [],
+      "amizadesDetalhes": {},
+      "progress": {}
     }
   },
   "admins": {

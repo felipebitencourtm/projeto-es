@@ -6,95 +6,56 @@
       "unidades": [
         {
           "number": 1,
-          "title": "Unidade 0",
+          "title": "What is Your Name?",
           "licoes": [
             {
-              "lessonId": "les_05f3d5",
+              "lessonId": "les_7ce7a0",
               "number": 1,
               "title": "Meu nome é",
               "exercicios": [
                 {
                   "type": "ExercicioGramatica",
-                  "exerciseId": "ex_aa3a6f",
-                  "exerciseTitle": "Como dizer?",
-                  "frontText": "Como dizer \"Meu nome é ...\"",
+                  "exerciseId": "ex_43aaed",
+                  "exerciseTitle": "Como dizer",
+                  "frontText": "Meu nome é",
                   "position": 1,
                   "pontosGramaticais": [
                     {
-                      "point": "Existem muitas formas de dizer o seu nome em inglês, a mais comum delas é",
-                      "description": "My name is ..."
-                    }
-                  ]
-                },
-                {
-                  "type": "ExercicioAlternativas",
-                  "exerciseId": "ex_1b0099",
-                  "exerciseTitle": "Selecione a alternativa correta",
-                  "frontText": "Como dizer \"Meu nome é Aldo\"",
-                  "position": 2,
-                  "alternativas": [
-                    {
-                      "id": "alt_0",
-                      "text": "My nickname is Aldo",
-                      "correct": false
-                    },
-                    {
-                      "id": "alt_1",
-                      "text": "My surname is Aldo",
-                      "correct": false
-                    },
-                    {
-                      "id": "alt_2",
-                      "text": "My name is Aldo",
-                      "correct": true
-                    },
-                    {
-                      "id": "alt_3",
-                      "text": "My alias is Aldo",
-                      "correct": false
+                      "point": "Meu nome é",
+                      "description": "My name is"
                     }
                   ]
                 },
                 {
                   "type": "ExercicioTraducao",
-                  "exerciseId": "ex_062819",
+                  "exerciseId": "ex_a6df4f",
                   "exerciseTitle": "Traduza a frase",
-                  "frontText": "My name is Victor",
-                  "position": 3,
+                  "frontText": "My name is Aldo",
+                  "position": 2,
                   "correctTexts": [
-                    "Meu nome é Victor"
+                    "Meu nome é Aldo",
+                    "Meu nome e Aldo"
                   ]
                 },
                 {
-                  "type": "RevisaoVocabulario",
-                  "exerciseId": "ex_89e326",
-                  "exerciseTitle": "Você sabe o que significa?",
-                  "frontText": "My",
-                  "position": 4,
-                  "backText": "Meu / Minha"
-                },
-                {
-                  "type": "RevisaoVocabulario",
-                  "exerciseId": "ex_c15736",
-                  "exerciseTitle": "Você sabe o que significa?",
-                  "frontText": "Name",
-                  "position": 5,
-                  "backText": "Nome"
-                },
-                {
-                  "type": "RevisaoVocabulario",
-                  "exerciseId": "ex_4ec950",
-                  "exerciseTitle": "Você sabe o que significa?",
-                  "frontText": "To be (is, am, are)",
-                  "position": 6,
-                  "backText": "Ser / Estar"
+                  "type": "ExercicioGramatica",
+                  "exerciseId": "ex_49f5f1",
+                  "exerciseTitle": "Como dizer",
+                  "frontText": "Ser / Estar",
+                  "position": 3,
+                  "pontosGramaticais": [
+                    {
+                      "point": "Verbo to be",
+                      "description": "To be / I am / You are / He is"
+                    }
+                  ]
                 },
                 {
                   "type": "ExercicioCombinar",
-                  "exerciseId": "ex_913d8b",
-                  "exerciseTitle": "Selecione as combinações corretas",
-                  "frontText": "Selecione uma alternativa à esquerda para cada alternativa à direita",
-                  "position": 7,
+                  "exerciseId": "ex_591d24",
+                  "exerciseTitle": "Selecione as alternativas correspondentes",
+                  "frontText": "O que significa",
+                  "position": 4,
                   "pares": [
                     {
                       "pairId": "par_0",
@@ -145,159 +106,167 @@
                       },
                       "second": {
                         "id": "c_3_2",
-                        "text": "Ser / Estar"
+                        "text": "Ser Estar"
                       }
                     }
                   ]
+                },
+                {
+                  "type": "RevisaoVocabulario",
+                  "exerciseId": "ex_7aa8f9",
+                  "exerciseTitle": "Flashcard",
+                  "frontText": "My",
+                  "position": 5,
+                  "backText": "Meu"
+                },
+                {
+                  "type": "RevisaoVocabulario",
+                  "exerciseId": "ex_a3f489",
+                  "exerciseTitle": "Flashcard",
+                  "frontText": "Name",
+                  "position": 6,
+                  "backText": "Nome"
+                },
+                {
+                  "type": "RevisaoVocabulario",
+                  "exerciseId": "ex_a6f4e6",
+                  "exerciseTitle": "Flashcard",
+                  "frontText": "To be",
+                  "position": 7,
+                  "backText": "Ser / Estar"
                 }
               ]
             },
             {
-              "lessonId": "les_d7fcd3",
+              "lessonId": "les_d9632d",
               "number": 2,
-              "title": "Qual o seu nome?",
+              "title": "Qual é o seu nome?",
               "exercicios": [
                 {
-                  "type": "ExercicioAlternativas",
-                  "exerciseId": "ex_0fd796",
-                  "exerciseTitle": "Qual dessas repostas seria uma resposta válida para a seguinte pergunta?",
-                  "frontText": "Hello, my name is Djulyan. What is your name?",
+                  "type": "ExercicioGramatica",
+                  "exerciseId": "ex_daec95",
+                  "exerciseTitle": "Como dizer",
+                  "frontText": "Como perguntar o nome de alguém",
                   "position": 1,
+                  "pontosGramaticais": [
+                    {
+                      "point": "Qual é o seu nome?",
+                      "description": "What is your name?"
+                    }
+                  ]
+                },
+                {
+                  "type": "ExercicioCombinar",
+                  "exerciseId": "ex_d8aa03",
+                  "exerciseTitle": "Selecione as opções correspontentes",
+                  "frontText": "O que significa?",
+                  "position": 2,
+                  "pares": [
+                    {
+                      "pairId": "par_0",
+                      "positionFirst": 1,
+                      "positionSecond": 5,
+                      "first": {
+                        "id": "c_0_1",
+                        "text": "What"
+                      },
+                      "second": {
+                        "id": "c_0_2",
+                        "text": "Qual"
+                      }
+                    },
+                    {
+                      "pairId": "par_1",
+                      "positionFirst": 2,
+                      "positionSecond": 6,
+                      "first": {
+                        "id": "c_1_1",
+                        "text": "Is"
+                      },
+                      "second": {
+                        "id": "c_1_2",
+                        "text": "É"
+                      }
+                    },
+                    {
+                      "pairId": "par_2",
+                      "positionFirst": 3,
+                      "positionSecond": 7,
+                      "first": {
+                        "id": "c_2_1",
+                        "text": "Your"
+                      },
+                      "second": {
+                        "id": "c_2_2",
+                        "text": "Seu"
+                      }
+                    },
+                    {
+                      "pairId": "par_3",
+                      "positionFirst": 4,
+                      "positionSecond": 8,
+                      "first": {
+                        "id": "c_3_1",
+                        "text": "Name"
+                      },
+                      "second": {
+                        "id": "c_3_2",
+                        "text": "Nome"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "RevisaoVocabulario",
+                  "exerciseId": "ex_3654b5",
+                  "exerciseTitle": "Flashcard",
+                  "frontText": "Your",
+                  "position": 3,
+                  "backText": "Seu / Sua"
+                },
+                {
+                  "type": "ExercicioAlternativas",
+                  "exerciseId": "ex_9a2292",
+                  "exerciseTitle": "Selecione a alternativa correta",
+                  "frontText": "Qual o seu nome?",
+                  "position": 4,
                   "alternativas": [
                     {
                       "id": "alt_0",
-                      "text": "Yes, I am",
-                      "correct": false
+                      "text": "What is your name?",
+                      "correct": true
                     },
                     {
                       "id": "alt_1",
-                      "text": "No, I don't think so",
+                      "text": "My name is Aldo",
                       "correct": false
                     },
                     {
                       "id": "alt_2",
-                      "text": "My name is Marco",
-                      "correct": true
+                      "text": "Your are my name",
+                      "correct": false
                     },
                     {
                       "id": "alt_3",
-                      "text": "Your name is Djulyan",
+                      "text": "Nice to meet you",
                       "correct": false
                     }
                   ]
                 },
                 {
                   "type": "ExercicioTraducao",
-                  "exerciseId": "ex_410709",
-                  "exerciseTitle": "Novo Exercício",
-                  "frontText": "",
-                  "position": 2,
-                  "correctTexts": []
-                },
-                {
-                  "type": "ExercicioTraducao",
-                  "exerciseId": "ex_87d4f5",
-                  "exerciseTitle": "Novo Exercício",
-                  "frontText": "",
-                  "position": 3,
-                  "correctTexts": []
-                },
-                {
-                  "type": "ExercicioTraducao",
-                  "exerciseId": "ex_4a19f9",
-                  "exerciseTitle": "Novo Exercício",
-                  "frontText": "",
-                  "position": 4,
-                  "correctTexts": []
-                },
-                {
-                  "type": "ExercicioTraducao",
-                  "exerciseId": "ex_8682dd",
-                  "exerciseTitle": "Novo Exercício",
-                  "frontText": "",
+                  "exerciseId": "ex_146b14",
+                  "exerciseTitle": "Traduza a frase",
+                  "frontText": "What is your name?",
                   "position": 5,
-                  "correctTexts": []
+                  "correctTexts": [
+                    "Qual o seu nome?",
+                    "Como você se chama?",
+                    "Qual é o seu nome?",
+                    "Qual é seu nome?"
+                  ]
                 }
               ]
-            },
-            {
-              "lessonId": "les_c8b940",
-              "number": 3,
-              "title": "Eu sou",
-              "exercicios": []
-            }
-          ]
-        },
-        {
-          "number": 2,
-          "title": "Unidade 1",
-          "licoes": [
-            {
-              "lessonId": "les_539522",
-              "number": 1,
-              "title": "O verbo to be",
-              "exercicios": []
-            },
-            {
-              "lessonId": "les_b40fd0",
-              "number": 2,
-              "title": "Tempo verbal: presente",
-              "exercicios": []
-            }
-          ]
-        }
-      ]
-    },
-    "lang_adc3dd29": {
-      "languageId": "lang_adc3dd29",
-      "name": "Japonês",
-      "unidades": [
-        {
-          "number": 1,
-          "title": "Alfabeto",
-          "licoes": [
-            {
-              "lessonId": "les_bbd436",
-              "number": 1,
-              "title": "1",
-              "exercicios": [
-                {
-                  "type": "ExercicioTraducao",
-                  "exerciseId": "ex_9d16ce",
-                  "exerciseTitle": "Novo Exercício",
-                  "frontText": "",
-                  "position": 1,
-                  "correctTexts": []
-                },
-                {
-                  "type": "ExercicioTraducao",
-                  "exerciseId": "ex_81d5ac",
-                  "exerciseTitle": "Novo Exercício",
-                  "frontText": "",
-                  "position": 2,
-                  "correctTexts": []
-                },
-                {
-                  "type": "ExercicioTraducao",
-                  "exerciseId": "ex_2fad6f",
-                  "exerciseTitle": "Novo Exercício",
-                  "frontText": "",
-                  "position": 3,
-                  "correctTexts": []
-                }
-              ]
-            },
-            {
-              "lessonId": "les_bebca6",
-              "number": 2,
-              "title": "2",
-              "exercicios": []
-            },
-            {
-              "lessonId": "les_20f46d",
-              "number": 3,
-              "title": "3",
-              "exercicios": []
             }
           ]
         }
